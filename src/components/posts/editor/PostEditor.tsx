@@ -57,7 +57,8 @@ export default function PostEditor() {
     mutation.mutate(
       {
         content: input || undefined,
-        mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
+        mediaIds:
+          (attachments.map((a) => a.mediaId).filter(Boolean) as string[]) || [],
       },
       {
         onSuccess: () => {
@@ -111,7 +112,9 @@ export default function PostEditor() {
         <LoadingButton
           onClick={onSubmit}
           loading={mutation.isPending}
-          disabled={isUploading || attachments.length === 0}
+          disabled={
+            isUploading || (attachments.length === 0 && input.length === 0)
+          }
           className="min-w-20"
         >
           Post
