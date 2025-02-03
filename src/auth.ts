@@ -47,6 +47,8 @@ export const google = new Google(
   `${getBaseUrl()}/api/auth/callback/google`,
 );
 
+console.log(getBaseUrl());
+
 export const validateRequest = cache(
   async (): Promise<
     { user: User; session: Session } | { user: null; session: null }
