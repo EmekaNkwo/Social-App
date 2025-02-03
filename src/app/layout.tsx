@@ -15,8 +15,8 @@ const karla = Karla({
 });
 export const metadata: Metadata = {
   title: {
-    template: "%s | social app",
-    default: "social app",
+    template: "%s | Social app",
+    default: "Social app",
   },
   description: "The social media app for the future",
 };
