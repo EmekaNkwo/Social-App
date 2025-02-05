@@ -4,7 +4,7 @@ A full-stack social media app with infinite loading, optimistic updates, authent
 
 ## Live Demo
 
-[Live demo](<[https://nextjs-15-social-media-app.vercel.app/](https://quikbook.netlify.app/)>)
+https://quikbook.netlify.app/
 
 ## Credentials
 
