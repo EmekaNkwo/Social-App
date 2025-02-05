@@ -1,4 +1,4 @@
-# Next.js 15 Social Media App
+# Social Media App
 
 A full-stack social media app with infinite loading, optimistic updates, authentication, Chatrooms, notifications, file uploads and validations, and likes, comments and bookmarks functionality.
 
