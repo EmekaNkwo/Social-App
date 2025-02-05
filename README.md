@@ -2,6 +2,15 @@
 
 A full-stack social media app with infinite loading, optimistic updates, authentication, Chatrooms, notifications, file uploads and validations, and likes, comments and bookmarks functionality.
 
+## Live Demo
+
+[Live demo](<[https://nextjs-15-social-media-app.vercel.app/](https://quikbook.netlify.app/)>)
+
+## Credentials
+
+- Username: TestAgent
+- Password: Password1
+
 ## Key Features
 
 - 🚀 **Blazing Fast Performance**: Powered by Next.js 15 with server-side rendering and optimistic updates
