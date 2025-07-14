@@ -15,6 +15,7 @@ import { ClipboardEvent, useRef } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
+import { ContentCard, GradientCard } from "@/components/Gradient-Background";
 
 export default function PostEditor() {
   const { user } = useSession();
@@ -38,20 +39,12 @@ export default function PostEditor() {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({
-        bold: false,
-        italic: false,
-      }),
-      Placeholder.configure({
-        placeholder: "What's on your mind?",
-      }),
+      StarterKit.configure({ bold: false, italic: false }),
+      Placeholder.configure({ placeholder: "What's on your mind?" }),
     ],
   });
 
-  const input =
-    editor?.getText({
-      blockSeparator: "\n",
-    }) || "";
+  const input = editor?.getText({ blockSeparator: "\n" }) || "";
 
   function onSubmit() {
     mutation.mutate(
@@ -77,7 +70,7 @@ export default function PostEditor() {
   }
 
   return (
-    <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
+    <ContentCard className="mt-2 flex flex-col gap-2">
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
         <div {...rootProps} className="w-full">
@@ -89,6 +82,7 @@ export default function PostEditor() {
             )}
             onPaste={onPaste}
           />
+
           <input {...getInputProps()} />
         </div>
       </div>
@@ -120,7 +114,7 @@ export default function PostEditor() {
           Post
         </LoadingButton>
       </div>
-    </div>
+    </ContentCard>
   );
 }
 

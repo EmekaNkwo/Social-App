@@ -32,3 +32,21 @@ export function slugify(input: string): string {
     .replace(/ /g, "-")
     .replace(/[^a-z0-9-]/g, "");
 }
+
+export function generateId(prefix: string = "msg"): string {
+  return `${prefix}_${Math.random().toString(36).substring(2, 11)}_${Date.now()}`;
+}
+
+export const formatTimeAgo = (dateString: string) => {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffInHours = Math.floor(
+    (now.getTime() - date.getTime()) / (1000 * 60 * 60),
+  );
+
+  if (diffInHours < 24) {
+    return `${diffInHours}h ago`;
+  } else {
+    return date.toLocaleDateString([], { month: "short", day: "numeric" });
+  }
+};
