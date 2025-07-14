@@ -16,7 +16,7 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, isOwnMessage }) => {
       >
         {!isOwnMessage && (
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-300">
-            {message.sender.name[0]}
+            {message.sender.displayName[0]}
           </div>
         )}
         <div
