@@ -78,6 +78,9 @@ export function useChats() {
         isGroup: false,
       }),
     });
+    if (!response.ok) {
+      throw new Error("Failed to create one-on-one chat");
+    }
     return response.json();
   };
 
