@@ -8,8 +8,8 @@ https://quikbook.netlify.app/
 
 ## Credentials
 
-- Username: TestAgent
-- Password: Password1
+- Username: zidos
+- Password: Password12
 
 ## Key Features
 
